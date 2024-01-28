@@ -1,0 +1,330 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  background-color: rgb(228, 238, 239);
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: rgb(28, 29, 30);
+  color: white;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.category button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+  margin-bottom: 10px; /* Adjusted margin for better separation */
+  border: none;
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.category button.author {
+  background-color:  rgb(80, 86, 86);
+  background-color: black;
+  color: white;
+}
+
+.category button.books {
+  background-color: rgb(28, 29, 30);
+  color: white;
+}
+
+.category button.logout {
+  background-color: rgb(28, 29, 30);
+  color: white;
+}       
+.svgdiv{
+  margin-top:50px;
+  margin:20px;
+}
+
+/* Main content styling */
+.main-content {
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #333;
+}
+h2{
+  color: white;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* Card styling */
+.card {
+  width: 670px;
+  height:120px;
+  padding: 1px;
+  margin-bottom: 15px;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color:white;
+  position: relative;
+}
+
+/* Different background colors for cards */
+.card1 {
+  background: rgb(62,221,160);
+  background: linear-gradient(90deg, #64C2DC 0%, #DBA9F7 100%);
+  padding:10px;
+  height:140px;
+  margin-left:10px;
+}
+
+.card2 {
+  background: rgb(228,74,60);
+  background: linear-gradient(90deg, rgba(228, 112, 138, 1), rgba(203, 102, 218, 1));
+  padding:10px;
+  height:140px;
+  margin-right:10px;
+}
+.card2 h2{
+  margin-left:20px;
+  font-size:70px;
+  
+}
+p {
+  margin: 0;
+}
+
+
+
+
+/* General button with class "btn" styling */
+.btn button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 250px;
+  margin-left:750px;
+  margin-top: 20px;
+  background-color: rgb(94, 164, 234);
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+/* Search Form styling */
+form {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  width:400px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.flex{
+  display: flex;
+  
+  /* justify-content: space-between; */
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+  
+  
+}
+
+.search-input {
+  padding-right: 30px; /* Adjust the padding to leave space for the icon */
+  border-radius:20px;
+  border: 1px solid rgb(214, 228, 242);
+  
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the right distance */
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+  height:30px;
+}
+
+
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+/* Pagination styling */
+.pagination {
+  margin-top: 20px;
+  text-align:center;
+}
+
+.pagination a {
+  padding: 8px;
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+}
+
+.pagination .current {
+  color: #2196F3;
+}
+
+/* Image styling */
+.card img {
+  width: 100px; /* Set the width of the image */
+  height: 90px; /* Set the height of the image */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.details-icon{
+  margin-left:5px;
+}
+.update-icon{
+  padding-right:5px;
+}
+
+.book-img {
+  right: 20px; /* Adjust the right distance for the book icon */
+  height:50px;
+  
+}
+
+.author-img {
+  right: 20px; /* Adjust the right distance for the author icon */
+}
+
+.card1 svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px; /* Adjust the right distance */
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  height: 70px;
+}
+.card2 svg {
+  position: absolute;
+  height:100px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px; /* Adjust the right distance */
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  height: 70px;
+}  
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  width:100%;
+  margin-left:0px;
+}
+
+.profile svg {
+  margin-left: 1200px;
+}
+
+.logout-btn {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 0px;
+}
+.icon-cell {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,43 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+<h1>Search Results</h1>
+<form action="{% url 'book-results' %}" method="GET">
+    <input type="text" name="q" placeholder="Search Books" value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+</form>
+<ul>
+    {% for book in page_obj %}
+    <li>
+        <h2>{{ book.title }}</h2>
+        <p>Author: {{ book.author }}</p>
+        <!-- Add more details about the book here -->
+    </li>
+    {% empty %}
+    <li>No books found.</li>
+    {% endfor %}
+</ul>
+
+<!-- Pagination links -->
+<div class="pagination">
+    {% if page_obj.has_previous %}
+    <a href="?q={{ request.GET.q }}&page=1">First</a>
+    <a href="?q={{ request.GET.q }}&page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+    {% if page_obj.has_next %}
+    <a href="?q={{ request.GET.q }}&page={{ page_obj.next_page_number }}">Next</a>
+    <a href="?q={{ request.GET.q }}&page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+</div>
+</body>
+</html> {% endcomment %}
